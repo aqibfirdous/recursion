@@ -1,18 +1,21 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
-
-# Other files and folders
-.settings/
-
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+#include<stdio.h>
+int power(int n1,int n2);
+int main()
+{
+	int b,a,r;
+	printf("enter the base:");
+	scanf("%d",&b);
+	print("enter the power:");
+	scanf("%d",&a);
+	r= power(b,a);
+	printf("value of %d^%d is=%d",b,a,r);
+	return 0;
+}
+int power(int b,int a)
+{
+	if(a!=0)
+	return(b*power(b,a-1));
+	else
+	return 1;
+	
+}
